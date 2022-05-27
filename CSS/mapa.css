@@ -1,0 +1,49 @@
+main{
+    width: 100%;
+}
+.contenedorBitacora{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.contenedorBitacora iframe{
+    flex-basis: 60%;
+    height: 70vh;
+}
+.contenedorBitacora section{
+    flex-basis: 30%;
+    margin-left: 50px;
+}
+.contenedorBitacora h3{
+    text-align: start;
+    padding: 10%;
+}
+.contenedorBitacora ul{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0 10% 10%;
+}
+.contenedorBitacora li{
+    list-style: none;
+}
+
+@media screen and (max-width: 450px){
+    .contenedorBitacora{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .contenedorBitacora iframe{
+        width: 100%;
+    }
+    .contenedorBitacora section{
+        width: 100%;
+        margin: 0;
+    }
+    .contenedorBitacora li{
+        padding: 1px 0 ;
+    }
+}   
