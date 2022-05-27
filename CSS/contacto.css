@@ -65,6 +65,7 @@ textarea{
     main{
         background-image: none;
         flex-direction: column;
+        align-items: center;
     }
     .imagenFormularioMovile{
         background-image: url(../imagenes/DSC_0253.JPG);
