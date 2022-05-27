@@ -58,9 +58,13 @@ textarea{
 @media screen and (max-width: 450px){
     .contenedorFormulario{
         width: 80vw;
-        left: 1%;
+        left: 0.1%;
         top: 5%;
         margin-bottom: 20px;
+        height: 90%;
+    }
+    .contenedorFormulario textarea{
+        height: 100%;
     }
     main{
         background-image: none;
