@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Shippori Mincho', serif;
+}
+
+img{
+    object-fit: cover;
+}
+
+/*------------------ GRILLA PRINCIPAL ------------------*/
+
+
+.contenedorGrid{
+    background-color: white;
+    margin: 5px;
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+    "header header header header header header header header"
+    "main main main main main main main main"
+    "main main main main main main main main"
+    "main main main main main main main main"
+    "main main main main main main main main"
+    "main main main main main main main main"
+    "main main main main main main main main"
+    "main main main main main main main main"
+    "main main main main main main main main"
+    "main main main main main main main main"
+    "main main main main main main main main"
+    "footer footer footer footer footer footer footer footer";
+    grid-template-rows: 80px repeat(10,1fr) 80px;
+    grid-template-columns: repeat(8,1fr);
+}
+
+.itemGrid{
+    padding: 2px;
+}
+
+#expresionJapones{
+    margin-top: 20px;
+}
+
+/*------------------ ARMANDO EL NAV ------------------*/
+
+.Cabezera{
+    background-color: white;
+    grid-area: header;
+}
+.logoNav{
+    width: 90px;
+}
+#logoGrulla{
+    max-width: 80%;
+    padding-left: 20px;
+}
+header>nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header>nav>ul{
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    /* margin-right: 1em; */
+}
+header>nav>ul>li{
+    display: inline-block;
+    letter-spacing: 0.3em;
+    margin: 0 10%;
+}
+a{
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+#navMenu{
+    display: none;
+}
+#navMenu>span{
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 9px;
+    background-color: black;
+}
+#navMenu>span:not(:last-child){
+    margin-bottom: 7px;
+}
+#navMenu, #navMenu>span{
+    transition: all .5s ease-in-out;
+}
+#navMenu.active{
+    transition-delay: .8s;
+    transform: rotate(45deg);
+}
+#navMenu.active>span:nth-child(2){
+    width: 0;
+}
+#navMenu.active>span:nth-child(1), #navMenu.active>span:nth-child(3) {
+    transition-delay: .4s;
+}
+#navMenu.active>span:nth-child(1){
+    transform: translateY(9px);
+}
+#navMenu.active>span:nth-child(3){
+    transform: translateY(-9px) rotate(90deg)
+}
+/*------------------ ARMANDO EL MAIN ------------------*/
+
+.Main{
+    background-color: white;
+    grid-area: main;
+}
+main{
+    height: 100%;
+    text-align: center;
+}
+h1{
+    margin-top: 5px;
+}
+h2{
+    margin-top: 5px;
+}
+.tituloDeArticulo{
+    padding-top: 15px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+.articuloFlexItem:nth-child(2) .tituloDeArticulo{
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+.separador{
+    border: none;
+    background-color: #41414138;
+    height: 1px;
+    margin: auto;
+    margin-top: 25px;
+    width: 90%;
+}
+
+.articuloFlex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.articuloFlexItem>p{
+    padding: 10px;
+    font-size: .8em;
+}
+.articuloFlexItem:first-child{
+    width: 50%;
+    align-self: center;
+}
+.articuloFlexItem:nth-child(2){
+    width: 50%;
+    align-self: center;
+}
+.articuloFlexItem:last-child{
+    width: 50%;
+    align-self: center;
+}
+.imagenFinDeArticulo{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+.imagenFinDeArticulo>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom 35% left 1%;
+    border-radius: 15px;
+}
+.articuloFlexItem:nth-child(2)>.imagenFinDeArticulo>img{
+    object-position: bottom 43% left 1%;
+}
+.articuloFlexItem:last-child>.imagenFinDeArticulo>img{
+    object-position: bottom 82% left 1%;
+}
+
+
+
+
+/*------------------ ARMANDO EL ASIDE ------------------*/
+
+.Lado{
+    background-color: #cbdffc;
+    grid-area: aside;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.fraseJap{
+    font-size: 2.2em;
+    letter-spacing: .2em;
+}
+.fraseEsp{
+    font-size: 1.3em;
+    letter-spacing: .2em;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+/*------------------ ARMANDO EL FOOTER ------------------*/
+
+.Footer{
+    background-color: #cad6d4;
+    grid-area: footer;   
+    align-self: flex-end;
+    border-radius: 5px; 
+}
+footer{
+    height: 3vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+footer>p{
+    font-size: 0.6em;
+}
+.redesSociales{
+    display: flex;
+    justify-content: space-evenly;
+}
+.redesSociales>li{
+    list-style: none;
+    margin: 0 2em;
+}
+
+/*------------------MEDIA QUERYS ------------------*/
+
+/*------------------Para Movile ------------------*/
+
+@media screen and (max-width: 450px){
+    #navMenu{
+        display: inline-block;
+    }
+    nav{
+        height: 100px;
+    }
+    header>nav>ul{
+        display: none;
+        position: relative;
+        left: 40px;
+    }
+    .desplegar{
+        flex-basis: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 9;
+    }
+    .desplegar li{
+        margin-bottom: 5px;
+    }
+    .desplegar li{
+        opacity: 0;
+    }
+    @keyframes mostrar {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+    .desplegar li:first-child{
+       animation: mostrar 2s ease-in-out forwards;
+    }
+    .desplegar li:nth-child(2){
+        animation: mostrar 2s ease-in-out .5s forwards;
+    }
+    .desplegar li:last-child{
+        animation: mostrar 2s ease-in-out 1s forwards;
+    }
+    .Main{
+        margin-top: 40px;
+    }
+    .articuloFlexItem:first-child, .articuloFlexItem:nth-child(2), .articuloFlexItem:last-child{
+        width: 85%;
+    }
+    footer{
+        flex-wrap: wrap;
+        height: 50px;
+    }
+    footer>p{
+        order: 5;
+    }
+    footer>div{
+        flex-basis: 100%;
+        margin: 5px auto 5px;
+    }
+}
+
+/*------------------Para Tablets ------------------*/
+
+@media screen and (min-width: 450px) and (max-width: 768px){
+    #navMenu{
+        display: block;
+    }
+    header>nav>ul{
+        display: none;
+    }
+    .desplegar{
+        flex-basis: 45%;
+        display: flex;
+        align-items: flex-end;
+        z-index: 9;
+    }
+    .desplegar li{
+        margin-bottom: 5px;
+    }
+    .desplegar li{
+        opacity: 0;
+    }
+    @keyframes mostrar {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+    .desplegar li:first-child{
+       animation: mostrar 2s ease-in-out forwards;
+    }
+    .desplegar li:nth-child(2){
+        animation: mostrar 2s ease-in-out .5s forwards;
+    }
+    .desplegar li:last-child{
+        animation: mostrar 2s ease-in-out 1s forwards;
+    }
+    .articuloFlexItem:first-child, .articuloFlexItem:nth-child(2), .articuloFlexItem:last-child{
+        width: 85%;
+    }
+}
+
+/*------------------Para Laptops o Escritorio ------------------*/
