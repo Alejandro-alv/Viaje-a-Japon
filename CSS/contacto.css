@@ -1,6 +1,6 @@
 main{
     height: 80vh;
-    background-image: url(../imagenes/DSC_0321x.JPG);
+    background-image: url(../imagenes/DSC_0253.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -67,7 +67,7 @@ textarea{
         flex-direction: column;
     }
     .imagenFormularioMovile{
-        background-image: url(imagenes/DSC_0253.JPG);
+        background-image: url(../imagenes/DSC_0253.JPG);
         background-size: cover;
         height: 30vh;
         width: 88vw;
