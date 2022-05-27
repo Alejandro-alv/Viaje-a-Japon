@@ -243,6 +243,15 @@ footer>p{
 @media screen and (max-width: 450px){
     #navMenu{
         display: inline-block;
+        margin-right: 20px;
+    }
+    .Cabezera header{
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: white;
+        z-index: 9;
+        width: 100%;
     }
     nav{
         height: 100px;
@@ -301,7 +310,16 @@ footer>p{
 
 @media screen and (min-width: 450px) and (max-width: 768px){
     #navMenu{
-        display: block;
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .Cabezera header{
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: white;
+        z-index: 9;
+        width: 100%;
     }
     header>nav>ul{
         display: none;
