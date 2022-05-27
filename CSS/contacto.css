@@ -67,7 +67,7 @@ textarea{
         flex-direction: column;
     }
     .imagenFormularioMovile{
-        background-image: url(/imagenes/DSC_0253.JPG);
+        background-image: url(imagenes/DSC_0253.JPG);
         background-size: cover;
         height: 30vh;
         width: 88vw;
